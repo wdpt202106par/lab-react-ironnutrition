@@ -11,8 +11,8 @@ class FoodBox extends React.Component {
     }
     render(){
         return (
-            <div className='columns'>
-                <div className="box column">
+            <div className='column'>
+                <div className="box">
                     <article className="media">
                         <div className="media-left">
                         <figure className="image is-64x64">
@@ -33,7 +33,7 @@ class FoodBox extends React.Component {
                             <input className="input" type="number" value={this.state.quantity} onChange={this.quantityHandler}/>
                             </div>
                             <div className="control">
-                            <button onClick={(el)=>this.props.addToMenu({name:this.props.name,calories:this.props.calories,quantity:this.state.quantity})} className="button is-info">
+                            <button onClick={()=>this.props.addToMenu({name:this.props.name,calories:this.props.calories,quantity:this.state.quantity})} className="button is-info">
                                 +
                             </button>
                             </div>
